@@ -64,7 +64,7 @@ export default function Home() {
           <h1 className="text-lg  lg:text-4xl font-bold text-center">
             Fresh From the Roots
           </h1>
-          <Image src={'/logo.png'} alt="Logo image" width={100} height={100} />
+          <Image src={'/logo.webp'} alt="Logo image" width={100} height={100} />
         </div>
 
         <p className="text-sm sm:text-base xl:text-md leading-relaxed">
