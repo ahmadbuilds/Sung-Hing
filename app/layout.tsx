@@ -93,10 +93,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased`}
       >
-        <Header/>
-        {children}
-        {/* Footer */}
-        <Footer/>
+        <div className="flex flex-col min-h-screen">
+          <Header/>
+          {children}
+          {/* Footer */}
+          <Footer/>
+        </div>
       </body>
     </html>
   );

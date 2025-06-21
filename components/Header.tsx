@@ -1,13 +1,12 @@
 'use client';
 import Image from "next/image"
 import Link from "next/link"
-import { Search, User2, ArrowDown, Menu, X } from "lucide-react"
+import { Search, User2, ChevronDown, Menu, X } from "lucide-react"
 import { useState } from "react"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
@@ -26,22 +25,23 @@ const Header = () => {
   }
 
   return (
-    <div className='w-full px-1 sm:px-10 py-3'>
+    <div className='w-full px-1 md:px-10 py-3'>
       <div className="flex items-center justify-between"> 
         {/* Logo */}
-        <Image src={'/logo.png'} alt="Logo Image" width={100} height={100}/>
+        <div className= "">
+          <Image src={'/logo.webp'} alt="Logo Image" width={125} height={125} className="object-contain block"/>
+        </div>
         
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-4">
-          <Link href={'/'} className="cursor-pointer hover:text-red-500 transition-colors">Home</Link>
-          <Link href={'/'} className="cursor-pointer hover:text-red-500 transition-colors">About Us</Link>
+        <div className="hidden lg:flex items-center justify-center gap-4 lg:gap-9">
+          <Link href={'/'} className="cursor-pointer hover:text-red-500 transition-colors text-base">Home</Link>
+          <Link href={'/'} className="cursor-pointer hover:text-red-500 transition-colors text-base">About Us</Link>
           
           <DropdownMenu modal={false}>
-            <DropdownMenuTrigger className="cursor-pointer m-0 p-0 border-none outline-none bg-transparent focus:outline-none focus:ring-0 flex items-center justify-center gap-1 hover:text-red-500 transition-colors">
-              Products <ArrowDown className="w-4 h-4"></ArrowDown>
+            <DropdownMenuTrigger className="text-base cursor-pointer m-0 p-0 border-none outline-none bg-transparent focus:outline-none focus:ring-0 flex items-center justify-center gap-1 hover:text-red-500 transition-colors">
+              Products <ChevronDown className="w-4 h-4"></ChevronDown>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-white text-black m-0 p-0 border-none outline-none shadow-lg">
-              <DropdownMenuLabel>Product Categories</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="hover:bg-red-500 cursor-pointer hover:text-white">Coconut Products</DropdownMenuItem>
               <DropdownMenuItem className="hover:bg-red-500 cursor-pointer hover:text-white">Rice</DropdownMenuItem>
@@ -52,11 +52,10 @@ const Header = () => {
           </DropdownMenu>
           
           <DropdownMenu modal={false}>
-            <DropdownMenuTrigger className="cursor-pointer m-0 p-0 border-none outline-none flex items-center justify-center gap-1 hover:text-red-500 transition-colors">
-              Brands <ArrowDown className="w-4 h-4"></ArrowDown>
+            <DropdownMenuTrigger className="text-base cursor-pointer m-0 p-0 border-none outline-none flex items-center justify-center gap-1 hover:text-red-500 transition-colors">
+              Brands <ChevronDown className="w-4 h-4"></ChevronDown>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-white text-black m-0 p-0 border-none outline-none shadow-lg">
-              <DropdownMenuLabel>Brands Categories</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="hover:bg-red-500 cursor-pointer hover:text-white">Black and White</DropdownMenuItem>
               <DropdownMenuItem className="hover:bg-red-500 cursor-pointer hover:text-white">Parrot</DropdownMenuItem>
@@ -65,11 +64,10 @@ const Header = () => {
           </DropdownMenu>
           
           <DropdownMenu modal={false}>
-            <DropdownMenuTrigger className="cursor-pointer m-0 p-0 border-none outline-none flex items-center justify-center gap-1 hover:text-red-500 transition-colors">
-              Recipe <ArrowDown className="w-4 h-4"></ArrowDown>
+            <DropdownMenuTrigger className="text-base cursor-pointer m-0 p-0 border-none outline-none flex items-center justify-center gap-1 hover:text-red-500 transition-colors">
+              Recipe <ChevronDown className="w-4 h-4"></ChevronDown>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-white text-black m-0 p-0 border-none outline-none shadow-lg">
-              <DropdownMenuLabel>Recipe Categories</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="hover:bg-red-500 cursor-pointer hover:text-white">Black and White</DropdownMenuItem>
               <DropdownMenuItem className="hover:bg-red-500 cursor-pointer hover:text-white">Parrot</DropdownMenuItem>
@@ -77,13 +75,13 @@ const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           
-          <Link href={'/'} className="cursor-pointer hover:text-red-500 transition-colors">Contact Us</Link>
+          <Link href={'/'} className="text-base cursor-pointer hover:text-red-500 transition-colors">Contact Us</Link>
         </div>
 
         {/* Right side icons */}
-        <div className="flex items-center justify-center gap-4">
+        <div className=" px-5 flex items-center justify-center gap-4">
           <Search className="w-5 h-5 text-gray-600 cursor-pointer hidden sm:block hover:text-red-500 transition-colors" />
-          <Link className="hidden sm:block bg-red-500 px-3 md:px-5 py-2 rounded-md text-white border border-red-500 hover:text-red-500 hover:bg-transparent transition-colors duration-300 text-sm md:text-base" href={'/'}>
+          <Link className="hidden sm:block bg-red-500 px-5 py-2 rounded-md text-white border border-red-500 hover:text-red-500 hover:bg-transparent transition-colors duration-300 text-base" href={'/'}>
             Shop Now
           </Link>
           <User2 className="w-5 h-5 text-gray-500 cursor-pointer hover:text-red-500 transition-colors"/>
@@ -91,7 +89,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button 
             onClick={toggleMobileMenu}
-            className="lg:hidden p-2"
+            className="lg:hidden"
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? (
@@ -117,7 +115,7 @@ const Header = () => {
                 className="flex items-center justify-between w-full text-left cursor-pointer hover:text-red-500 transition-colors px-2 py-1"
               >
                 Products 
-                <ArrowDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'products' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'products' ? 'rotate-180' : ''}`} />
               </button>
               {openDropdown === 'products' && (
                 <div className="ml-4 mt-2 space-y-2">
@@ -137,7 +135,7 @@ const Header = () => {
                 className="flex items-center justify-between w-full text-left cursor-pointer hover:text-red-500 transition-colors px-2 py-1"
               >
                 Brands 
-                <ArrowDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'brands' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'brands' ? 'rotate-180' : ''}`} />
               </button>
               {openDropdown === 'brands' && (
                 <div className="ml-4 mt-2 space-y-2">
@@ -155,7 +153,7 @@ const Header = () => {
                 className="flex items-center justify-between w-full text-left cursor-pointer hover:text-red-500 transition-colors px-2 py-1"
               >
                 Recipe 
-                <ArrowDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'recipe' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'recipe' ? 'rotate-180' : ''}`} />
               </button>
               {openDropdown === 'recipe' && (
                 <div className="ml-4 mt-2 space-y-2">
@@ -173,9 +171,15 @@ const Header = () => {
               <Link className="block w-full bg-red-500 px-4 py-3 rounded-md text-white text-center border border-red-500 hover:text-red-500 hover:bg-transparent transition-colors duration-300 mb-3" href={'/'}>
                 Shop Now
               </Link>
-              <div className="flex items-center gap-2 px-2 py-1">
-                <Search className="w-5 h-5 text-gray-600 cursor-pointer" />
-                <span className="text-gray-600 text-sm">Search</span>
+              <div className="w-full relative">
+                <input
+                  type="text"
+                  placeholder="Enter your Email "
+                  className="w-full  border border-gray-400 text-sm text-gray-500 py-2 pl-3 pr-10 rounded-md placeholder:text-gray-400 focus:border-red-500 focus:outline-none"
+                />
+                <Link href="/">
+                  <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 hover:text-red-500" />
+                </Link>
               </div>
             </div>
           </div>
