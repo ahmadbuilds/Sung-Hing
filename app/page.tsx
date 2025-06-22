@@ -35,7 +35,7 @@ export default function Home() {
         </Carousel>
       </div>
       {/* Fresh Roots Page */}
-      <div className="w-full md:max-w-[calc(100vw-45px)] mb-10 mx-auto h-auto xl:h-[75hv] relative p-4 sm:p-6  lg:p-10">
+      <div className="w-full md:max-w-[calc(100vw-45px)] mb-10 mx-auto h-auto xl:h-[75hv] relative p-4 md:p-4  lg:p-10">
         <div className="w-full flex flex-col xl:flex-row items-center justify-center gap-10 h-full">
     
         <div className="relative flex-shrink-0">
@@ -101,11 +101,11 @@ export default function Home() {
         </div>
         
         {/* Content Overlay - Main Content */}
-        <div className=" top-0 left-0 absolute flex flex-col justify-center p-8  text-center lg:px-15  items-center gap-3 w-full h-full ">
+        <div className=" top-0 left-0 absolute flex flex-col justify-center px-4 md:p-8  text-center lg:px-15  items-center gap-3 w-full h-full ">
             <h1 className="text-3xl xl:text-7xl font-bold  mb-10">Sustaining Our Future</h1>
             <p className="text-sm sm:text-base xl:text-md leading-relaxed text-justify">​​​​​​Sun Hing has a passion for helping others. We proudly partner with more local ranchers, growers, and producers than any distributor in the industry. We support farm to table initiatives to deliver the best products from anywhere, to everywhere. Sun Hing has partnerships with food banks and other hunger relief organizations to invest in the needs of diverse communities around the world. Fighting hunger is a vital part of Sun Hing’s heart.</p>
             <Link href={'/shop'} className="text-white bg-red-500 px-5 py-2 rounded-md hover:bg-red-600 transition-colors duration-200 cursor-pointer">Learn More</Link>
-            <h1 className="font-bold text-blue-400 text-5xl  xl:mt-0 mt-20 xl:text-9xl">Our Future</h1>
+            <h1 className="font-bold bg-gradient-to-t from-[rgb(41,107,138)] to-blue-400 bg-clip-text text-transparent text-5xl  xl:mt-0 mt-20 xl:text-9xl">Our Future</h1>
         </div>
         
         {/* Grass Images at Bottom */}
@@ -151,7 +151,7 @@ export default function Home() {
         <div className="hidden absolute h-full -bottom-24 -left-28 z-30 xl:flex lg:items-end">
             <Image src={'/logo1.webp'} alt="Logo Picture" width={850} height={850} className="object-contain"/>
         </div>
-        <div className="z-50 top-1/4  right-0 px-8 lg:pr-14 absolute space-y-3 lg:w-[60%]  items-center lg:items-start w-full flex flex-col gap-3">
+        <div className="z-50 top-1/4  right-0 px-4 md:px-8 lg:pr-14 absolute space-y-3 lg:w-[60%]  items-center lg:items-start w-full flex flex-col gap-3">
           <h1 className="font-bold  text-3xl lg:text-7xl">Food is About People</h1>
           <p className="text-sm sm:text-base xl:text-md leading-relaxed line-clamp-6 text-justify">At Sun Hing, we want to be your most valued and trusted business partner. We aim to exceed your expectations and deliver shipments as ordered. Sun Hing invests in your success at every level. We deploy 200 professionally-trained local chefs, and offer consulting and business planning services to enhance your menu, keep you on top of emerging trends, and increase the efficiencies that grow your business.</p>
           <Link href={'/'} className="text-white hover:text-red-400 bg-red-500 px-5 py-2 rounded-md border border-red-500 hover:bg-transparent transition-colors duration-300">Become a Customer</Link>
@@ -163,7 +163,7 @@ export default function Home() {
           <Image src={'/feature.webp'} alt="Feature Image" fill className="object-cover" priority/>
           <div className="absolute inset-0 bg-[linear-gradient(to_right,black_0%,rgba(0,0,0,0.9)_30%,transparent_70%)]" />
         </div>
-        <div className=" top-1/4 lg:left-[2%]  px-8 lg:pr-10 absolute space-y-3 lg:w-[60%]  items-center lg:items-start md:items-center w-full flex flex-col gap-3 text-white">
+        <div className=" top-1/4 lg:left-[2%]  px-4 md:px-8 lg:pr-10 absolute space-y-3 lg:w-[60%]  items-center lg:items-start md:items-center w-full flex flex-col gap-3 text-white">
           <h1 className="font-bold  text-3xl  lg:text-6xl xl:7xl">Featured Products</h1>
           <p className="text-sm sm:text-base xl:text-md leading-relaxed text-justify  text-gray-100 line-clamp-6 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
           <Link href={'/'} className="bg-red-500 px-5 py-2 rounded-md border border-red-500 hover:bg-transparent transition-colors duration-300">Become a Customer</Link>

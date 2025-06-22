@@ -24,7 +24,7 @@ const Header = () => {
   }
 
   return (
-    <div className='w-full px-1 md:px-14 py-3'>
+    <div className='w-full px-4 md:px-8 lg:px-14 py-3'>
       <div className="flex items-center justify-between"> 
         {/* Logo */}
         <div className="bg-blue-500"> 
