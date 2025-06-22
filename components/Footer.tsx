@@ -11,12 +11,12 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-black px-6 xl:pr-15 xl:pl-6 py-10 text-white">
+    <footer className="bg-black px-8 xl:pr-15 xl:pl-8 py-10 text-white">
       <div className="grid grid-cols-1 xl:grid-cols-5 gap-8 relative">
         {/* Logo + Description */}
         <div className="flex flex-col items-center xl:items-start gap-4 ">
           <Image
-            src="/logo.webp"
+            src="/logo1.webp"
             alt="Business Logo"
             width={125}
             height={125}
