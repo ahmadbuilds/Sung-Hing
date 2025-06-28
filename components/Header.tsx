@@ -27,8 +27,8 @@ const Header = () => {
     <div className='w-full px-4 md:px-8 lg:px-14 py-3'>
       <div className="flex items-center justify-between"> 
         {/* Logo */}
-        <div className="bg-blue-500"> 
-          <img src={'/logo.webp'} alt="Logo Image" className="bg-blue-500 w-[60px] h-[60px] block "/>
+        <div> 
+          <img src={'/logo.webp'} alt="Logo Image" className="w-[60px] h-[60px] block "/>
 
         </div>
         
