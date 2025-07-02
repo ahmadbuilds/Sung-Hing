@@ -75,7 +75,7 @@ const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           
-          <Link href={'/'} className="text-base cursor-pointer hover:text-red-500 transition-colors">Contact Us</Link>
+          <Link href={'/Contact'} className="text-base cursor-pointer hover:text-red-500 transition-colors">Contact Us</Link>
         </div>
 
         {/* Right side icons */}
@@ -164,7 +164,7 @@ const Header = () => {
               )}
             </div>
 
-            <Link href={'/'} className="cursor-pointer hover:text-red-500 transition-colors px-2 py-1">Contact Us</Link>
+            <Link href={'/Contact'} className="cursor-pointer hover:text-red-500 transition-colors px-2 py-1">Contact Us</Link>
             
             {/* Mobile-only elements */}
             <div className="sm:hidden pt-2 border-t border-gray-100 mt-4">
