@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { Toaster } from "@/components/ui/sonner";
 const inter=Inter({
   variable:"--font-inter-mono",
   subsets:["latin"],
@@ -96,6 +97,18 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <Header/>
           {children}
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              style: {
+                background: "black",
+                color: "white",
+                borderRadius: "12px",
+                padding: "24px",
+              },
+              duration: 2000,
+            }}
+          />
           {/* Footer */}
           <Footer/>
         </div>
