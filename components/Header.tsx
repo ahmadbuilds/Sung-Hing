@@ -35,7 +35,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center justify-center gap-4 lg:gap-9">
           <Link href={'/'} className="cursor-pointer hover:text-red-500 transition-colors text-base">Home</Link>
-          <Link href={'/'} className="cursor-pointer hover:text-red-500 transition-colors text-base">About Us</Link>
+          <Link href={'/About'} className="cursor-pointer hover:text-red-500 transition-colors text-base">About Us</Link>
           
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger className="text-base cursor-pointer m-0 p-0 border-none outline-none bg-transparent focus:outline-none focus:ring-0 flex items-center justify-center gap-1 hover:text-red-500 transition-colors">
@@ -106,7 +106,7 @@ const Header = () => {
         <div className="lg:hidden mt-4 pb-4 border-t border-gray-200">
           <div className="flex flex-col space-y-4 pt-4">
             <Link href={'/'} className="cursor-pointer hover:text-red-500 transition-colors px-2 py-1">Home</Link>
-            <Link href={'/'} className="cursor-pointer hover:text-red-500 transition-colors px-2 py-1">About Us</Link>
+            <Link href={'/About'} className="cursor-pointer hover:text-red-500 transition-colors px-2 py-1">About Us</Link>
             
             {/* Mobile Products Dropdown */}
             <div>
