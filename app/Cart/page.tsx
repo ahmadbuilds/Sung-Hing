@@ -1,4 +1,5 @@
 'use client';
+export const dynamic = "force-dynamic";
 import React, { useState, useMemo } from 'react'
 import { Carousel, CarouselItem, CarouselContent } from '@/components/ui/carousel'
 import Image from 'next/image'
