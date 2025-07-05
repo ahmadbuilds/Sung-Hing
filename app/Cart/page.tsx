@@ -425,7 +425,7 @@ const CartPage = () => {
   const [sortBy, setSortBy] = useState('name')
   const {user}=useUser();
   const GetUserByEmail = useQuery(api.users.GetUserByEmail, user ? { email: user?.emailAddresses[0].emailAddress ?? "" } : "skip");
-  const id=GetUserByEmail!._id;
+  const id=GetUserByEmail?._id as Id<"users">;
   // Fetch cart items for the user - Fixed query call
   const cartItems = useQuery(api.Cart.GetCartByUser, { userId:id });
   
