@@ -28,7 +28,7 @@ const About = () => {
       {/* Our Story section */}
       <div className='px-4 md:px-8 lg:px-14 xl:pr-15 my-10 w-full'>
         <div className='flex flex-col items-center justify-center gap-10 w-full'>
-            <h1 className='text-3xl  lg:text-6xl font-bold'>
+            <h1 className='text-4xl xl:text-6xl font-bold'>
                 Our Story
             </h1>
             <p className='text-base text-center'>Sun Hing Foods began with a passion for quality and a commitment to community, growing from its roots into a trusted name in the <br/>food industry, serving diverse cultures across North America.</p>
@@ -54,7 +54,7 @@ const About = () => {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center items-center'>
                 <Image src={'/tracter.webp'} alt='Tracter Image' width={700} height={700} priority className='rounded-md object-cover w-full max-w-full '></Image>
                 <div className='flex flex-col items-center lg:items-start justify-center gap-4'>
-                    <h1 className='font-bold text-3xl lg:text-6xl'>Our Approach</h1>
+                    <h1 className='text-4xl xl:text-6xl font-bold'>Our Approach</h1>
                     <p className='text-base text-justify'>
                         At Sun Hing Foods, we believe in a holistic approach to food distribution. Our focus is on quality, sustainability, and customer satisfaction.
                     </p>
@@ -62,14 +62,14 @@ const About = () => {
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center items-center mt-10'>
                 <div className='hidden lg:flex flex-col items-center lg:items-start justify-center gap-4'>
-                    <h1 className='font-bold text-3xl lg:text-6xl'>Sustainability</h1>
+                    <h1 className='text-4xl xl:text-6xl font-bold'>Sustainability</h1>
                     <p className='text-base text-justify'>
                         We are dedicated to sustainability in every step of our process—from sourcing to packaging. Learn more about how we’re making a positive impact on the planet.
                     </p>
                 </div>
                 <Image src={'/left.webp'} alt='Left Image' width={700} height={700} priority className='object-cover rounded-md w-full max-w-full '></Image>
                 <div className='flex lg:hidden flex-col items-center lg:items-start justify-center gap-4'>
-                    <h1 className='font-bold text-3xl lg:text-6xl'>Sustainability</h1>
+                    <h1 className='text-4xl xl:text-6xl font-bold'>Sustainability</h1>
                     <p className='text-base text-justify'>
                         We are dedicated to sustainability in every step of our process—from sourcing to packaging. Learn more about how we’re making a positive impact on the planet.
                     </p>
@@ -79,7 +79,7 @@ const About = () => {
         {/* Testimonials Section */}
         <div className='px-4 md:px-8 lg:px-14 xl:pr-15 mt-10 py-10 w-full bg-gray-100'>
             <div className='flex flex-col items-center justify-center gap-3'>
-                <h1 className='text-3xl lg:text-6xl font-bold'>
+                <h1 className='text-4xl xl:text-6xl font-bold'>
                     Testimonials
                 </h1>
                 <p className='text-base text-justify'>Don&apos;t take our word for it. Trust our Customers</p>
@@ -109,7 +109,7 @@ const About = () => {
                                 })
                             }
                     </div>
-                    <h1 className='font-bold text-3xl'>Floyd Miles</h1>
+                    <h1 className='font-semibold text-2xl'>Floyd Miles</h1>
                     <p className='text-justify text-base'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                 </div>
                 <div className='bg-white flex flex-col items-center md:items-start justify-center md:justify-start text-center gap-5 py-10 px-5 rounded-md'>
@@ -136,7 +136,7 @@ const About = () => {
                                 })
                             }
                     </div>
-                    <h1 className='font-bold text-3xl'>Ronald Richards</h1>
+                    <h1 className='font-semibold text-2xl'>Ronald Richards</h1>
                     <p className='text-justify text-base'>ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                 </div>
                 <div className='bg-white flex flex-col items-center md:items-start justify-center md:justify-start  text-center gap-5 py-10 px-5 rounded-md'>
@@ -163,7 +163,7 @@ const About = () => {
                                 })
                             }
                     </div>
-                    <h1 className='font-bold text-3xl'>Savannah Nguyen</h1>
+                    <h1 className='font-semibold text-2xl'>Savannah Nguyen</h1>
                     <p className='text-justify text-base'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                 </div>
             </div>
