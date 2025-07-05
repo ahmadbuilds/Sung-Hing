@@ -4,6 +4,9 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Toaster } from "@/components/ui/sonner";
+import { ClerkProvider } from "@clerk/nextjs";
+import { ConvexClientProvider } from "@/components/ConvexClientProvider";
+import SyncUserWithConvex from "@/components/SyncUserWithConvex";
 const inter=Inter({
   variable:"--font-inter-mono",
   subsets:["latin"],
@@ -90,29 +93,37 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.variable} antialiased`}
-      >
-        <div className="flex flex-col min-h-screen">
-          <Header/>
-          {children}
-          <Toaster
-            position="top-center"
-            toastOptions={{
-              style: {
-                background: "black",
-                color: "white",
-                borderRadius: "12px",
-                padding: "24px",
-              },
-              duration: 2000,
-            }}
-          />
-          {/* Footer */}
-          <Footer/>
-        </div>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${inter.variable} antialiased`}
+        >
+          <div className="flex flex-col min-h-screen">
+            <ConvexClientProvider>
+              {/* Header */}
+              <Header/>
+              {children}
+              {/* Sync user with Convex */}
+              <SyncUserWithConvex></SyncUserWithConvex>
+              {/* Toast for Messages */}
+              <Toaster
+                position="top-center"
+                toastOptions={{
+                  style: {
+                    background: "black",
+                    color: "white",
+                    borderRadius: "12px",
+                    padding: "24px",
+                  },
+                  duration: 2000,
+                }}
+              />
+              {/* Footer */}
+              <Footer/>
+            </ConvexClientProvider>
+          </div>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

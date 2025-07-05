@@ -11,20 +11,20 @@ export default function Home() {
   return (
     <div>
       {/* Image Slider */}
-      <div className="w-full  h-[65vh] md:h-[55vh] lg:h-[75vh] custom-height relative overflow-hidden">
+      <div className="w-full  h-[55vh] lg:h-[75vh] custom-height relative overflow-hidden">
         <Carousel className="w-full h-full relative">
           <CarouselContent className="w-full h-full ml-0 cursor-pointer hover:text-red-500">
-            <CarouselItem className="relative w-full h-[65vh] md:h-[55vh] lg:h-[75vh] custom-height pl-0">
+            <CarouselItem className="relative w-full h-[55vh] lg:h-[75vh] custom-height pl-0">
               <div className="h-full w-full relative z-0">
                 <Image src={'/slider.webp'} alt="Slider" fill priority className="object-cover"/>
               </div>
               <div className="absolute inset-0 bg-black/60 z-20 w-full h-full"></div>
-              <div className="absolute inset-0 flex items-center justify-center text-center w-full h-[65vh] md:h-[55vh] lg:h-[75vh] custom-height z-30 text-white">
+              <div className="absolute inset-0 flex items-center justify-center text-center w-full h-[55vh] lg:h-[75vh] custom-height z-30 text-white">
                 <div className="bg-red-500/15 p-20 w-full">
                   <CarouselPrevious  className="absolute top-1/2 left-[14px] md:left-[45px] -translate-y-1/2 z-10"/>
                   <div className="">
                     <h1 className="text-3xl md:text-6xl lg:text-8xl font-extrabold">Introducing <br></br>MarketPlace</h1>
-                    <p className="text-xs md:text-base pt-5 md:p-10 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    <p className="text-sm md:text-base pt-5 md:p-10 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
                   </div>
                   <CarouselNext  className="absolute top-1/2 right-[14px] md:right-[45px] -translate-y-1/2 z-10 cursor-pointer hover:text-red-500"/>
@@ -85,8 +85,8 @@ export default function Home() {
     </div>
   </div> */}
       {/* Fresh from the roots */}
-      <div className="w-full  h-auto px-4 md:px-0 md:grid md:grid-cols-3 items-center mt-8 mb-4 md:mb-0 md:gap-9 lg:gap-16">
-        <div className="hidden items-center justify-start  md:flex">
+      <div className="w-full  h-auto px-4 md:px-8 lg:px-0 lg:grid lg:grid-cols-3 items-center mt-8 mb-4 md:mb-0 md:gap-9 lg:gap-16">
+        <div className="hidden items-center justify-start  lg:flex">
           <Image src={'/right.webp'} width={700} height={700} alt="right Image" className="w-full md:max-w-[285px] lg:max-w-[500px] xl:max-w-[700px] h-auto aspect-square object-cover rounded-tr-full rounded-br-full"></Image>
         </div>
         <div className="flex flex-col items-center justify-center gap-5 xl:px-4">
@@ -95,7 +95,7 @@ export default function Home() {
             <p className="text-sm sm:text-base xl:text-md text-justify">
             Fresh food and fresh ideas are at the heart of food and service. Sun Hing delivers exceptional produce, custom cuts of meat, high-quality seafood, and imported foods offering global flavors.
             <br /><br/>
-            Our network of specialty suppliers pairs well with our culinary and business expertise. Sun Hing’s unparalleled selection of innovative ingredients and cutting-edge products connects your business to the industry-leading distribution network — keeping you stocked with the freshest products, trends, and ideas.
+            <span className="">Our network of specialty suppliers pairs well with our culinary and business expertise. Sun Hing’s unparalleled selection of innovative ingredients and cutting-edge products connects your business to the industry-leading distribution network — keeping you stocked with the freshest products, trends, and ideas.</span>
             </p>
             <Link
             href="/"
@@ -104,7 +104,7 @@ export default function Home() {
             Learn More
           </Link>
         </div>
-        <div className="hidden md:flex items-center justify-end h-full">
+        <div className="hidden lg:flex items-center justify-end h-full">
           <Image src={'/left.webp'}  width={500}  height={500} alt="left Image" className="object-cover h-auto w-full md:max-w-[285px] lg:max-w-[500px] xl:max-w-[700px] aspect-square rounded-tl-full rounded-bl-full "></Image>
         </div>
       </div>
