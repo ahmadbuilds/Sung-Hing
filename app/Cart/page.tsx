@@ -425,12 +425,9 @@ const CartPage = () => {
   const [sortBy, setSortBy] = useState('name')
   const {user}=useUser();
   const GetUserByEmail = useQuery(api.users.GetUserByEmail, user ? { email: user?.emailAddresses[0].emailAddress ?? "" } : "skip");
- if(!user || !GetUserByEmail)
- {
-  throw new Error("Please Login");
- }
- // Fetch cart items for the user - Fixed query call
-  const cartItems = useQuery(api.Cart.GetCartByUser, { userId:GetUserByEmail?._id });
+  const id=GetUserByEmail!._id;
+  // Fetch cart items for the user - Fixed query call
+  const cartItems = useQuery(api.Cart.GetCartByUser, { userId:id });
   
   // Fetch all products to get product details - Fixed query call
   const allProducts = useQuery(api.Product.GetProduct)
